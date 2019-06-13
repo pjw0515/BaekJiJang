@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>미세먼지 예측</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua" rel="stylesheet">
+
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-menu" data-offset="110">
+
+		<nav class="site-header sticky-top py-1">
+			<div class="container d-flex flex-column flex-md-row justify-content-between">
+				<a class="py-2" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+				</a>
+			</div>
+		</nav>
+		<div class="position-relative overflow-hidden p-3 m-md-3 text-center bg-white">
+			<div class="col-md-7 mx-auto my-5">
+        <h1 class="font-weight-bold" style="font-size: 1.9em; padding-bottom: 5px; color: #666666; line-height: 1.2; font-family: 'Jua', sans-serif;">기상정보를통한</h1>
+        <h1 class="font-weight-bold" style="font-size: 1.9em; padding-bottom: 5px; color: #666666; line-height: 1.2; font-family: 'Jua', sans-serif;">미세먼지 예측서비스</h1>
+        <div style="padding-top: 5px; padding-bottom: 5px;"></div>
+        <p class="font-weight-light" style="font-size: 0.8rem; white-space: pre; color: #999999;">
+          과거의 기상데이터를 바탕으로 미세먼지를 예측하여 제공합니다
+          컴퓨터 공학과 캡스톤 디자인 6조 백지장
+        </p>
+        <a class="btn btn-primary" href="Fine dust prediction value.html" style="background-color: #0099CC; border-color: #0099CC; font-family: 'Do Hyeon', sans-serif;">예측정보 확인하기</a>
+      </div>
+      <div class="col-md-8 pg-lg-5 mx-auto my-5">
+        <p style="font-size: 0.9rem;">
+          기상정보는 <a href="https://www.airkorea.or.kr/"><span style="color: #0099FF;">에어코리아</span></a> 그리고 <a href="https://www.data.go.kr/"><span style="color: #0099FF;">공공데이터포털</span></a> 에서 제공받았습니다
+        </p>
+      </div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+  	</div>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+      <div class="row mx-auto justify-content-center">
+        <div class="col-4 overflow-hidden" style="float: right;">
+        </div>
+        <div class="col-5 overflow-hidden" style="text-align: left; padding-top: 8rem;">
+          <h1 style="font-size: 1.5em; font-weight: bold;">과거의 데이터 시각화</h1>
+          <hr style="width: 50%; border: solid 1px #33CCCC; float:left;">
+          <p style="font-size: 1.8rem; float: left;">
+            <a href="2013.html"><span style="color: #0099FF;">2013년 기온과 미세먼지 분석<br></span></a>
+            <a href="2014.html"><span style="color: #0099FF;">2014년 기온과 미세먼지 분석<br></span></a>
+            <a href="2015.html"><span style="color: #0099FF;">2015년 기온과 미세먼지 분석<br></span></a>
+            <a href="2016.html"><span style="color: #0099FF;">2016년 기온과 미세먼지 분석<br></span></a>
+            <a href="2017.html"><span style="color: #0099FF;">2017년 기온과 미세먼지 분석<br></span></a>
+            <br>
+            <br>
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 bg-white">
+
+      <div class="row col-md-8 mx-auto">
+        <div class="col-xs-6 col-sm-4 p-3">
+          <div></div>
+          <div style="float: left">
+            <p style="font-size: 0.9rem; float: left;">
+              <span style="font-size: 1.3rem; font-family: 'Do Hyeon', sans-serif;">미세먼지란?</span><br>
+              미세먼지 또는 분진은 눈에 보이지 않을 정도로 입자가 작은 먼지이다. 아황산가스, 질소 산화물, 납, 오존, 일산화 탄소 등을 포함하는 대기오염 물질로 자동차, 공장 등에서 발생하여 대기 중 장기간 떠다니는 입경 10μm 이하의 미세한 먼지다.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 p-3">
+          <div></div>
+          <div style="float: left;">
+            <p style="font-size: 0.9rem; float: left;">
+              <span style="font-size: 1.3rem; font-family: 'Do Hyeon', sans-serif;">미세먼지 1차 발생원</span><br>
+              산불/쓰레기등의 불법소각, 건설현장, 자동차 등 배기가스, 도로/ 빈 집터, 공장
+화학연료연소,자동차배기가스,공장제조공정(대기오염물질 배출)->황산화물 질소산화물 암모니아등-(화학반응)>미세먼지 생성
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 p-3">
+          <div></div>
+          <div style="float: left;">
+            <p style="font-size: 0.9rem; float: left;">
+              <span style="font-size: 1.3rem; font-family: 'Do Hyeon', sans-serif;">미세먼지 2차 발생원</span><br>
+              미세먼지 성분구성-황산염질산염등(58.3%) 탄소류와검댕(16.8%), 광물(6.3%), 기타(18.6%)
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 p-3">
+          <div></div>
+          <div style="float: left;">
+            <p style="font-size: 0.9rem; float: left;">
+              <span style="font-size: 1.3rem; font-family: 'Do Hyeon', sans-serif;">미세먼지가 인체에미치는 영향</span><br>
+              눈-안구 가려움증, 염증유발<br>
+뇌-혈전을 만들고 세포를 손상시켜 뇌졸중,치매유발<br>
+폐-염증을 일으키고, 기침과 천식악화<br>
+심장- 산화스트레스 증가로 부정맥 발생<br>
+태아-성장 저하, 출생 후 뇌 신경 발달 저하로 지능 저하<br>
+피부-모공확대, 피부염,알레르기 유발<br>
+자궁-태반의 혈액순환이 잘 안돼 태아에 영양공급 방해<br>
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 p-3">
+          <div></div>
+          <div style="float: left;">
+            <p style="font-size: 0.9rem; float: left;">
+              <span style="font-size: 1.3rem; font-family: 'Do Hyeon', sans-serif;">미세먼지 주의보와경보기준</span><br>
+주의보기준 PM-2.5 해제기준 시간 평균 35㎍/㎥ 미만<br>
+경보기준 PM-2.5 해제기준 시간 평균 75㎍/㎥ 미만
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 p-3">
+          <div></div>
+          <div style="float: left;">
+            <p style="font-size: 0.9rem; float: left;">
+              <span style="font-size: 1.3rem; font-family: 'Do Hyeon', sans-serif;">고농도 미세먼지 대응요령</span><br>
+              1. 외출은 가급적 자제하기<br>
+2. 외출시 보건용 마스크(식약처 인증) 착용하기<br>
+3. 외출시 대기오염이 심한 곳은 피하고, 활동량 줄이기<br>
+4. 외출 후 깨끗이 씻기<br>
+5. 물과 비타민C가 풍부한 과일‧야채 섭취하기<br>
+6. 환기, 물청소 등 실내공기질 관리하기<br>
+7. 대기오염 유발행위 자제하기
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-relative overflow-hidden" style="background-color: #e9e9e9">
+      <div class="col-md-10 mx-auto my-5 text-center">
+        <p class="font-weight-light" style="font-size: 1.5rem; font-family: 'Do Hyeon', sans-serif;">
+          위 데이터는 100% 정확하지 않습니다.
+        </p>
+        <p>예측이므로 특이사항 발생시 크게 달라질 수 있습니다</p>
+      </div>
+    </div>
+    <div class="position-relative overflow-hidden" style="background: linear-gradient(to right, #01A9DB, #0489B1, #086A87, #0B4C5F);">
+      <div class="col-md-10 mx-auto my-5 text-center">
+        <p class="font-weight-light" style="color: #fff; font-size: 1.5rem; font-family: 'Do Hyeon', sans-serif;">
+          백지장도 맞들면 낫다
+        </p>
+        <p style="font-weight-light; color: #fff;">조선대학교 컴퓨터공학과 빅데이터분석 산학캡스톤 디자인 6조</p>
+        <a class="btn btn-primary" href="#">상단으로</a>
+      </div>
+    </div>
+    <div class="position-relative overflow-hidden  p-3 text-center" style="background-color: #084B8A">
+      <p style="font-weight-light; color: #fff; margin-top: auto; margin-bottom: auto;">Copyright All rights reserved by 김치운</p>
+    </div>
+  </body>
+</html>
